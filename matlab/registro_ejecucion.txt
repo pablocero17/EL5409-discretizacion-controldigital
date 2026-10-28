@@ -1,0 +1,52 @@
+
+================ ej1_primer_orden ================
+
+Gz =
+ 
+    0.3935
+  ----------
+  z - 0.6065
+ 
+Sample time: 0.5 seconds
+Discrete-time transfer function.
+x(k) = 0.3935 u(k-1) + 0.6065 x(k-1)
+x(1..5) = [0 0.3935 0.6321 0.7769 0.8647]
+
+================ ej2_segundo_orden ================
+
+Gz =
+ 
+    0.2247 z + 0.2099
+  ----------------------
+  z^2 - 1.384 z + 0.8187
+ 
+Sample time: 0.5 seconds
+Discrete-time transfer function.
+x(k) = 0.2247 u(k-1) + 0.2099 u(k-2) + 1.3841 x(k-1) - 0.8187 x(k-2)
+x(1..5) = [0 0.2247 0.7456 1.283 1.6]
+Diferencia máxima con lsim: 6.7e-16
+
+================ metodos_c2d ================
+zoh      num = [0 0.2247 0.2099]          den = [1 -1.384 0.8187]
+foh      num = [0.0774 0.2872 0.06998]    den = [1 -1.384 0.8187]
+impulse  num = [0 0.4164 0]               den = [1 -1.384 0.8187]
+tustin   num = [0.102 0.2041 0.102]       den = [1 -1.429 0.8367]
+matched  num = [0 0.2173 0.2173]          den = [1 -1.384 0.8187]
+
+================ filtros_senal ================
+EMA alfa = 0.20  ->  tau_f = 0.090 s,  fc = 1.78 Hz
+
+Fz =
+ 
+    0.2
+  -------
+  z - 0.8
+ 
+Sample time: 0.02 seconds
+Discrete-time transfer function.
+
+================ pi_pid_discreto ================
+PI:  u(k) = u(k-1) + 1.2500 e(k) -0.7500 e(k-1)
+     tfdata(pid):  [1.2500 -0.7500]
+PID: u(k) = u(k-1) + 1.7500 e(k) -1.7500 e(k-1) +0.5000 e(k-2)
+     tfdata(pid):  [1.7500 -1.7500 0.5000]
