@@ -2,7 +2,7 @@
 
 **Laboratorio de Control Automático (EL5409)** · Prof. Pablo César Rodríguez Vargas
 
-Enlace del repositorio: https://github.com/pablocero17/labcontrol-discretizacion-controldigital
+Enlace del repositorio: https://github.com/pablocero17/EL5409-discretizacion-controldigital
 
 Material de la clase sobre cómo pasar un sistema de control del tiempo continuo al tiempo discreto, para programarlo en un computador o un microcontrolador. Incluye la presentación en PDF, los ejemplos en MATLAB y los mismos ejemplos programados en Arduino.
 
